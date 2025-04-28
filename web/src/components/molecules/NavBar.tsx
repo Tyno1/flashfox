@@ -51,7 +51,7 @@ export function NavBar() {
   }, []);
 
   return (
-    <nav className="bg-secondary p-5 shadow-md">
+    <nav className="bg-background p-5 shadow-md sticky top-0">
       <div className="container mx-auto flex items-center ">
         <div className="text-secondary-foreground font-bold text-xl">
           FlashFox
@@ -75,7 +75,7 @@ export function NavBar() {
             <div className="md:hidden ">
               <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="bg-secondary ">
+                  <Button variant="outline" className="bg-background">
                     <Menu className="text-secondary-foreground" />
                   </Button>
                 </DropdownMenuTrigger>
