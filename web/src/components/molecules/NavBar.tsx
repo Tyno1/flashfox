@@ -51,7 +51,7 @@ export function NavBar() {
   }, []);
 
   return (
-    <nav className="bg-background p-5 shadow-md sticky top-0">
+    <nav className="bg-background p-5 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex items-center ">
         <div className="text-secondary-foreground font-bold text-xl">
           FlashFox
