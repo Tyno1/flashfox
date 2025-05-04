@@ -5,7 +5,7 @@ import { Button } from "@/components/atoms";
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center h-[90vh] w-full gap-6 px-8">
+    <section className="flex flex-col items-center h-[92vh] w-full gap-6 px-8">
       <div className="flex w-full justify-center items-center py-8">
         <div className="w-full lg:w-[80%] flex flex-col items-center gap-4">
           <div className=" flex gap-3 items-center justify-center rounded-full p-2 border-1 border-primary">
