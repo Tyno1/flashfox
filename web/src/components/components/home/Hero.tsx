@@ -1,5 +1,4 @@
 import hero from "@/assets/andy-li-CpsTAUPoScw-unsplash.jpg";
-import hero2 from "@/assets/markus-spiske-RWTUrJf7I5w-unsplash.jpg";
 import hero3 from "@/assets/rosebox-BFdSCxmqvYc-unsplash.jpg";
 
 import { Button } from "@/components/atoms";
@@ -36,7 +35,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-[80%] h-full flex items-end justify-center gap-4 mb-4">
+      <div className="w-full lg:w-[80%] h-full flex items-end justify-center gap-4 mb-4">
         <div className="relative h-full w-full md:w-[80%] rounded-xl flex items-end">
           <div className="absolute h-full w-full">
             <img
@@ -46,9 +45,11 @@ export function Hero() {
             />
           </div>
           <div className="bg-linear-to-t from-primary to-secondary absolute inset-0 opacity-90 rounded-xl bg-blend-multiply"></div>
-          <p className="z-10 px-2 py-6 text-sm md:text-lg text-primary-foreground">
-            Premium Service for Wide Range of Logistics Needs
-          </p>
+          <div className="px-2 py-4 md:p-4 z-10">
+            <p className="text-sm text-primary-foreground">
+              Premium Service for Wide Range of Logistics Needs
+            </p>
+          </div>
         </div>
         <div className="h-[70%] w-[60%] rounded-xl bg-secondary hidden md:flex"></div>
         <div className="h-[50%] w-full rounded-xl">
@@ -68,9 +69,11 @@ export function Hero() {
             />
           </div>
           <div className="bg-linear-to-t from-primary to-secondary absolute inset-0 opacity-90 rounded-xl bg-blend-multiply"></div>
-          <p className="z-10 px-2 py-6 text-sm md:text-lg  text-primary-foreground">
-            Revolutionalizing Logistics One Customer at a time
-          </p>
+          <div className="px-2 py-4 md:p-4 z-10">
+            <p className="text-sm text-primary-foreground">
+              Revolutionalizing Logistics One Customer at a time
+            </p>
+          </div>
         </div>
       </div>
     </section>
