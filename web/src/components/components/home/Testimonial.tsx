@@ -1,3 +1,5 @@
+import { Button } from "@/components/atoms";
+
 const testimonials = [
   {
     name: "Adrian Holt",
@@ -64,7 +66,9 @@ export function Testimonial() {
             <p className="text-sm line-clamp-8">{testimonial.message}</p>
           </div>
         ))}
-      </div>{" "}
+      </div>
+      <Button variant="outline" className="my-auto rounded-none mt-4">View More</Button>
+
     </section>
   );
 }
