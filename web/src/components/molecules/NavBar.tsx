@@ -59,8 +59,8 @@ export function NavBar() {
         <div className="ml-auto flex relative">
           <div className="hidden md:flex items-center space-x-6 ">
             <ul className="flex text-primary-foreground">
-              {NavLinks.map((link) => (
-                <li>
+              {NavLinks.map((link, index) => (
+                <li key={index}>
                   <a
                     className="text-secondary-foreground text-sm p-2 mr-6"
                     href={link.path}
