@@ -7,6 +7,7 @@ import {
   User,
   Warehouse,
 } from "lucide-react";
+import { motion } from "motion/react";
 
 const features = [
   {
@@ -42,19 +43,66 @@ const features = [
 ];
 
 export function Features() {
+  const defaultAnimation = {
+    hidden: {
+      height: 0,
+      opacity: 0,
+      y: 40,
+    },
+    visible: {
+      height: "auto",
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <section className="min-h-[92vh] w-full flex flex-col items-center justify-center bg-secondary-foreground px-4 py-10">
       <div className="text-secondary  w-[70%] lg:w-[50%] text-center mb-10">
-        <h2 className="text-2xl md:text-4xl font-medium mb-2">
+        <motion.h2
+          variants={defaultAnimation}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.5,
+          }}
+          className="text-2xl md:text-4xl font-medium mb-2"
+        >
           Efficient and Integrated Logistics Services
-        </h2>
-        <p className="text-xs">
+        </motion.h2>
+        <motion.p
+          variants={defaultAnimation}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.5,
+          }}
+          className="text-xs"
+        >
           Simplify logistics with our efficient, quality focused services
-        </p>
+        </motion.p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-0 md:px-[5%]">
+      <motion.div
+        variants={defaultAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          staggerChildren: 0.03,
+          
+        }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-0 md:px-[5%]"
+      >
         {features.map((feature, index) => (
-          <div key={index} className="w-full h-[170px] lg:h-[200px] bg-primary/20 rounded-lg p-6 flex flex-col justify-between text-sm md:text-medium text-secondary">
+          <div
+            key={index}
+            className="w-full h-[170px] lg:h-[200px] bg-primary/20 rounded-lg p-6 flex flex-col justify-between text-sm md:text-medium text-secondary"
+          >
             <div className="flex justify-between">
               <div>{feature.icon}</div>
               <div>
@@ -67,7 +115,7 @@ export function Features() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
